@@ -1,0 +1,10 @@
+//Given the node access, delete it. Node will not be tail node.
+
+public void deleteNode(ListNode node) {
+        ListNode temp = node.next;
+        node.val = temp.val;
+        node.next = temp.next;
+}
+
+//Just copy node.next val and pointer to current node.
+//Java gc will take care of deleting node.next as it is no longer reachable.
